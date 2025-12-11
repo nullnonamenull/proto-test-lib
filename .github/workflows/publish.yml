@@ -24,3 +24,4 @@ jobs:
 
       - name: Build & Deploy
         run: mvn -B clean deploy
+        working-directory: ./proto-test-lib
