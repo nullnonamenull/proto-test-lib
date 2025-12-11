@@ -1,5 +1,9 @@
 name: Build & publish proto-test-lib
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     branches: [ master ]
