@@ -23,8 +23,8 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
           server-id: github
-          server-username: nullnonamenull
-          server-password: ${{ secrets.GITHUB_TOKEN }}
+          server-username: GITHUB_ACTOR
+          server-password: ${{ secrets.PROTO_TEST_LIB_TOKEN }}
 
       - name: Build & Deploy
         run: mvn -B clean deploy
