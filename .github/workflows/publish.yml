@@ -1,8 +1,8 @@
 name: Build & publish proto-test-lib
 
-#permissions:
-#  contents: read
-#  packages: write
+permissions:
+  contents: read
+  packages: write
 
 on:
   push:
@@ -23,9 +23,12 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
           server-id: github
-          server-username: nullnonamenull
-          server-password: ${{ secrets.PROTO_TEST_LIB_TOKEN }}
+          server-username: GITHUB_USER
+          server-password: GITHUB_TOKEN
 
       - name: Build & Deploy
         run: mvn -B clean deploy
         working-directory: ./proto-test-lib
+        env:
+          GITHUB_USER: nullnonamenull
+          GITHUB_TOKEN: ${{ secrets.PROTO_TEST_LIB_TOKEN }}
