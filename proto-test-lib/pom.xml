@@ -12,7 +12,7 @@
 
     <groupId>com.noname</groupId>
     <artifactId>proto-test-lib</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>proto-test-lib</name>
     <description>proto-test-lib</description>
     <packaging>jar</packaging>
