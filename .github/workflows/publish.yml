@@ -6,7 +6,7 @@ permissions:
 
 on:
   push:
-    tags: [ "release*" ]
+    tags: [ "v*" ]
 
 jobs:
   build-and-deploy:
