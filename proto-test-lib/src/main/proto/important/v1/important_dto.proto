@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package important.v1;
+
+option java_package = "com.noname.proto.important.v1";
+option java_outer_classname = "ImportantProto";
+
+message ImportantDTO {
+  string a = 1;
+  int32 b = 2;
+  int32 c = 3;
+}
