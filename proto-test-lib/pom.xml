@@ -12,7 +12,7 @@
 
     <groupId>com.noname</groupId>
     <artifactId>proto-test-lib</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <name>proto-test-lib</name>
     <description>proto-test-lib</description>
     <packaging>jar</packaging>
@@ -115,8 +115,18 @@
                         <phase>verify</phase>
                         <goals><goal>exec</goal></goals>
                         <configuration>
-                            <executable>buf</executable>
+                            <executable>docker</executable>
                             <arguments>
+                                <argument>run</argument>
+                                <argument>--rm</argument>
+
+                                <argument>-v</argument>
+                                <argument>${project.basedir}:/work</argument>
+
+                                <argument>-w</argument>
+                                <argument>/work</argument>
+
+                                <argument>bufbuild/buf:1.61.0</argument>
                                 <argument>lint</argument>
                             </arguments>
                         </configuration>
